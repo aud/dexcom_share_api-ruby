@@ -13,7 +13,7 @@ require "dexcom_share_api"
 client = DexcomShareApi.create_client(
   username: "Dexcom share username",
   password: "Dexcom share password",
-  # If your account is registered in the US, otherwise `not-us`.
+  # If your account is registered in the US, otherwise `outside-us`.
   server: "us",
 )
 
