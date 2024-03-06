@@ -1,0 +1,141 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://shareous1.dexcom.com/ShareWebServices/Services/General/AuthenticatePublisherAccount
+    body:
+      encoding: UTF-8
+      string: '{"applicationId":"d8665ade-9673-4e27-9ff6-92db4ce13d13","accountName":"username","password":"hunter2"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Mar 2024 03:03:13 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '38'
+      Connection:
+      - keep-alive
+      Vary:
+      - Access-Control-Request-Headers
+      - Access-Control-Request-Method
+      - Origin
+      X-Trace-Id:
+      - aa8f651c-20cd-4770-9f00-e7306650bbff
+      Strict-Transport-Security:
+      - max-age=0
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 85ff1c7fec9b3400-YUL
+    body:
+      encoding: UTF-8
+      string: '"c701bac4-4c7b-447a-a703-39e1046ab2ax"'
+  recorded_at: Wed, 06 Mar 2024 03:03:13 GMT
+- request:
+    method: post
+    uri: https://shareous1.dexcom.com/ShareWebServices/Services/General/LoginPublisherAccountById
+    body:
+      encoding: UTF-8
+      string: '{"applicationId":"d8665ade-9673-4e27-9ff6-92db4ce13d13","accountId":"b701bac6-8f7b-447a-a703-39e104bab6ad","password":"hunter2"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Mar 2024 03:03:13 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '38'
+      Connection:
+      - keep-alive
+      Vary:
+      - Access-Control-Request-Headers
+      - Access-Control-Request-Method
+      - Origin
+      X-Trace-Id:
+      - a91d113b-7b8f-4a0a-90b2-e405a998a7fc
+      Strict-Transport-Security:
+      - max-age=0
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 85ff1c832e2d7145-YUL
+    body:
+      encoding: UTF-8
+      string: '"1158b0cc-b560-40af-9433-9b967afbac97"'
+  recorded_at: Wed, 06 Mar 2024 03:03:13 GMT
+- request:
+    method: post
+    uri: https://shareous1.dexcom.com/ShareWebServices/Services/Publisher/ReadPublisherLatestGlucoseValues
+    body:
+      encoding: UTF-8
+      string: '{"maxCount":10,"sessionId":"4608b0cc-b560-30ac-9433-9b967afbac92","minutes":1440}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Mar 2024 03:03:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Access-Control-Request-Headers
+      - Access-Control-Request-Method
+      - Origin
+      X-Trace-Id:
+      - 6dc914d0-20ad-4d48-91ac-99b47d32ac95
+      Strict-Transport-Security:
+      - max-age=0
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 85ff1c872e3d7138-YUL
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"WT":"Date(1709693993000)","ST":"Date(1709693993000)","DT":"Date(1709693993000-0500)","Value":193,"Trend":"Flat"},{"WT":"Date(1709693693000)","ST":"Date(1709693693000)","DT":"Date(1709693693000-0500)","Value":195,"Trend":"Flat"},{"WT":"Date(1709693393000)","ST":"Date(1709693393000)","DT":"Date(1709693393000-0500)","Value":196,"Trend":"Flat"},{"WT":"Date(1709693093000)","ST":"Date(1709693093000)","DT":"Date(1709693093000-0500)","Value":192,"Trend":"Flat"},{"WT":"Date(1709692793000)","ST":"Date(1709692793000)","DT":"Date(1709692793000-0500)","Value":187,"Trend":"Flat"},{"WT":"Date(1709692493000)","ST":"Date(1709692493000)","DT":"Date(1709692493000-0500)","Value":181,"Trend":"Flat"},{"WT":"Date(1709692194000)","ST":"Date(1709692194000)","DT":"Date(1709692194000-0500)","Value":179,"Trend":"Flat"},{"WT":"Date(1709691894000)","ST":"Date(1709691894000)","DT":"Date(1709691894000-0500)","Value":177,"Trend":"Flat"},{"WT":"Date(1709691593000)","ST":"Date(1709691593000)","DT":"Date(1709691593000-0500)","Value":174,"Trend":"Flat"},{"WT":"Date(1709691293000)","ST":"Date(1709691293000)","DT":"Date(1709691293000-0500)","Value":176,"Trend":"FortyFiveDown"}]'
+  recorded_at: Wed, 06 Mar 2024 03:03:13 GMT
+recorded_with: VCR 6.2.0

@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://shareous1.dexcom.com/ShareWebServices/Services/General/AuthenticatePublisherAccount
+    body:
+      encoding: UTF-8
+      string: '{"applicationId":"d8665ade-9673-4e27-9ff6-92db4ce13d13","accountName":"username","password":"hunter2"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Date:
+      - Wed, 06 Mar 2024 03:15:52 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '619'
+      Connection:
+      - keep-alive
+      Vary:
+      - Access-Control-Request-Headers
+      - Access-Control-Request-Method
+      - Origin
+      X-Trace-Id:
+      - f54c41a9-e4bb-48ed-85e4-5f6274aab70b
+      Strict-Transport-Security:
+      - max-age=0
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 85ff2f0c8bf36e0b-YUL
+    body:
+      encoding: UTF-8
+      string: '{"Code":"AccountPasswordInvalid","Message":"Publisher account password
+        failed","SubCode":"<OnlineException DateThrownLocal=\"2024-03-06T03:15:52.849434774\"
+        DateThrown=\"2024-03-06T03:15:52.849434774Z\" ErrorCode=\"AccountPasswordInvalid\"
+        Type=\"13\" Category=\"4\" Severity=\"1\" TypeString=\"InvalidPassword\" CategoryString=\"Validation\"
+        SeverityString=\"Minor\" HostName=\"\" HostIP=\"\" Id=\"{b00071a7-8a3a-43d7-a32d-e162843d79bd}\"
+        Message=\"Publisher account password failed\" FullText=\"com.dexcom.udp.common.data.exception.OnlineException:
+        Publisher account password failed\" />","TypeName":"FaultException"}'
+  recorded_at: Wed, 06 Mar 2024 03:15:52 GMT
+recorded_with: VCR 6.2.0
