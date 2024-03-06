@@ -3,6 +3,8 @@ TLDR; This is a tiny gem to interact with the Dexcom Share API. The API is
 guarantees. However, it hasn't changed for the past few years so it should be
 fairly stable. Feel free to report any bugs and I'll fix them!
 
+https://rubygems.org/gems/dexcom_share_api
+
 ## Usage
 ```ruby
 require "dexcom_share_api"
