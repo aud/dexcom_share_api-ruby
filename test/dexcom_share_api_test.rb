@@ -60,6 +60,7 @@ class DexcomShareApiTest < Minitest::Test
       assert_equal(9.78, actual.mmol)
       assert_equal(176.0, actual.mgdl)
       assert_equal("forty-five-down", actual.trend)
+      assert_equal("↘", actual.trend_arrow)
       assert_equal("2024-03-06T02:14:53+00:00", actual.timestamp)
     end
   end
@@ -81,6 +82,7 @@ class DexcomShareApiTest < Minitest::Test
 
       expected = {
         trend: "flat",
+        trend_arrow: "→",
         timestamp: "2024-03-06T02:59:53+00:00",
         mmol: 10.72,
         mgdl: 193.0,

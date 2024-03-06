@@ -18,6 +18,7 @@ module DexcomShareApi
     def to_h
       {
         trend:,
+        trend_arrow:,
         timestamp:,
         mmol:,
         mgdl:,
@@ -35,6 +36,27 @@ module DexcomShareApi
 
     def trend
       @raw_glucose_data["Trend"].split(/(?=[A-Z])/).join("-").downcase
+    end
+
+    def trend_arrow
+      case trend
+      when "double-up"
+        "↑↑"
+      when "single-up"
+        "↑"
+      when "forty-five-up"
+        "↗"
+      when "flat"
+        "→"
+      when "forty-five-down"
+        "↘"
+      when "single-down"
+        "↓"
+      when "double-down"
+        "↓↓"
+      else
+        raise StandardError, "Unhandled trend `#{trend}`. This is a bug!"
+      end
     end
 
     # This is parsing out an epoch time from "Date(1709620791000)". It's messy.

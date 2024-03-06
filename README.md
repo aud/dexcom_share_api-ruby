@@ -29,13 +29,14 @@ glucose.each do |entry|
   puts entry.mmol # => 5.39
   puts entry.mgdl # => 151.0
   puts entry.trend # => "flat"
+  puts entry.trend_arrow # => "→"
   # Timestamp is an iso8601
   puts entry.timestamp # => "2024-03-06T04:14:53+00:00"
 end
 
 # Alternatively, to grab the last entry:
 glucose = client.last_estimated_glucose
-puts glucose.to_h # => {:trend=>"flat", :timestamp=>"2024-03-06T04:14:53+00:00", :mmol=>8.39, :mgdl=>151.0}
+puts glucose.to_h # => {:trend=>"flat", :trend_arrow=>"→", :timestamp=>"2024-03-06T04:14:53+00:00", :mmol=>8.39, :mgdl=>151.0}
 ```
 
 ## History
